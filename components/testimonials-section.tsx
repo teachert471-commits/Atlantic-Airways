@@ -10,7 +10,7 @@ const testimonials = [
     location: "London, UK",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
     rating: 5,
-    content: "Atlantic Crown Airways has completely transformed my transatlantic travel experience. The Business Class service is impeccable, and the crew goes above and beyond every single time.",
+    content: "British Airways has completely transformed my transatlantic travel experience. The Club World service is impeccable, and the crew goes above and beyond every single time.",
   },
   {
     name: "Michael Chen",
@@ -18,7 +18,7 @@ const testimonials = [
     location: "Manchester, UK",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
     rating: 5,
-    content: "I fly to New York monthly, and there's no airline that comes close to the comfort and service Atlantic Crown provides. The lie-flat beds and gourmet dining make the journey a pleasure.",
+    content: "I fly to New York monthly, and there's no airline that comes close to the comfort and service BA provides. The lie-flat beds and gourmet dining make the journey a pleasure.",
   },
   {
     name: "Emma Williams",
@@ -26,7 +26,7 @@ const testimonials = [
     location: "Birmingham, UK",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
     rating: 5,
-    content: "From the airport lounge to landing in Miami, every touchpoint was exceptional. The attention to detail and genuine hospitality sets Atlantic Crown apart from any airline I've experienced.",
+    content: "From the airport lounge to landing in Miami, every touchpoint was exceptional. The attention to detail and genuine hospitality sets British Airways apart from any airline I've experienced.",
   },
 ]
 
@@ -35,14 +35,14 @@ export function TestimonialsSection() {
     <section id="deals" className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/30">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <p className="text-accent font-medium tracking-[0.3em] uppercase mb-4">
+          <p className="text-accent font-semibold tracking-wide uppercase mb-4">
             Testimonials
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 text-balance">
-            What Our Travelers Say
+            What our customers say
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Join thousands of satisfied passengers who have chosen Atlantic Crown Airways for their premium travel needs.
+            Join millions of satisfied passengers who have chosen British Airways for their travel needs.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="glass rounded-2xl p-8 relative group hover:bg-secondary/50 transition-all duration-300"
+              className="bg-card rounded-lg p-8 relative group hover:shadow-lg transition-all duration-300 border border-border"
             >
               <Quote className="absolute top-6 right-6 h-10 w-10 text-accent/20" />
               
