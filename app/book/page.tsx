@@ -593,7 +593,7 @@ export default function BookingPage() {
                       ))}
                     </div>
                   </div>
-                </>
+                </div>
               )}
 
               {/* Step 3: Extras - Seats & Meals */}
