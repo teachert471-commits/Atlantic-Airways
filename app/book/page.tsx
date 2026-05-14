@@ -28,7 +28,7 @@ const steps = [
 const flightOptions = [
   {
     id: "flight-1",
-    flightNumber: "AC101",
+    flightNumber: "BA 115",
     departure: "06:30",
     arrival: "10:45",
     duration: "8h 15m",
@@ -40,7 +40,7 @@ const flightOptions = [
   },
   {
     id: "flight-2",
-    flightNumber: "AC205",
+    flightNumber: "BA 177",
     departure: "11:00",
     arrival: "15:30",
     duration: "8h 30m",
@@ -52,7 +52,7 @@ const flightOptions = [
   },
   {
     id: "flight-3",
-    flightNumber: "AC301",
+    flightNumber: "BA 283",
     departure: "14:00",
     arrival: "18:30",
     duration: "8h 30m",
@@ -64,7 +64,7 @@ const flightOptions = [
   },
   {
     id: "flight-4",
-    flightNumber: "AC401",
+    flightNumber: "BA 179",
     departure: "21:45",
     arrival: "02:15+1",
     duration: "8h 30m",
@@ -168,7 +168,7 @@ export default function BookingPage() {
   const taxes = Math.round(basePrice * 0.12)
   const totalPrice = basePrice + seatPrice + mealPrice + baggagePrice + loungePrice + insurancePrice + taxes
 
-  const bookingRef = "ACA-" + Math.random().toString(36).substring(2, 8).toUpperCase()
+  const bookingRef = "BA" + Math.random().toString(36).substring(2, 8).toUpperCase()
 
   return (
     <div className="min-h-screen bg-background">
@@ -176,15 +176,11 @@ export default function BookingPage() {
       <header className="glass fixed top-0 left-0 right-0 z-50 border-b border-border/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative">
-                <div className="absolute inset-0 bg-accent/20 rounded-full blur-xl group-hover:bg-accent/30 transition-colors" />
-                <Plane className="relative h-7 w-7 text-primary rotate-[-30deg]" />
+            <Link href="/" className="flex items-center gap-2 group">
+              <div className="w-9 h-9 rounded-full bg-accent flex items-center justify-center">
+                <Plane className="h-4 w-4 text-accent-foreground rotate-[-30deg]" />
               </div>
-              <div className="flex flex-col">
-                <span className="text-base font-semibold tracking-tight text-foreground">Atlantic Crown</span>
-                <span className="text-[10px] tracking-[0.2em] text-muted-foreground uppercase">Airways</span>
-              </div>
+              <span className="text-base font-bold tracking-tight text-foreground">British Airways</span>
             </Link>
             <Link href="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
               <ArrowLeft className="h-4 w-4" />

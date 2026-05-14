@@ -4,45 +4,47 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Atlantic Crown Airways - Premium Dark Blue, Silver & White */
-  --background: oklch(0.08 0.02 250); /* Deep navy */
+  /* British Airways - Midnight Blue, Speedmarque Red & White */
+  --background: oklch(0.12 0.03 255); /* Midnight blue */
   --foreground: oklch(0.98 0 0); /* Pure white */
-  --card: oklch(0.12 0.025 250); /* Slightly lighter navy */
+  --card: oklch(0.16 0.035 255); /* Slightly lighter midnight */
   --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.12 0.025 250);
+  --popover: oklch(0.16 0.035 255);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.85 0.02 250); /* Silver */
-  --primary-foreground: oklch(0.08 0.02 250);
-  --secondary: oklch(0.18 0.03 250); /* Muted navy */
+  --primary: oklch(0.98 0 0); /* White */
+  --primary-foreground: oklch(0.12 0.03 255);
+  --secondary: oklch(0.20 0.04 255); /* Muted midnight */
   --secondary-foreground: oklch(0.95 0 0);
-  --muted: oklch(0.18 0.03 250);
-  --muted-foreground: oklch(0.65 0.02 250);
-  --accent: oklch(0.65 0.15 220); /* Accent blue */
+  --muted: oklch(0.20 0.04 255);
+  --muted-foreground: oklch(0.65 0.02 255);
+  --accent: oklch(0.55 0.22 25); /* BA Red / Speedmarque */
   --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.25 0.03 250);
-  --input: oklch(0.15 0.025 250);
-  --ring: oklch(0.65 0.15 220);
-  --chart-1: oklch(0.65 0.15 220);
-  --chart-2: oklch(0.75 0.12 200);
-  --chart-3: oklch(0.55 0.18 240);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.28 0.04 255);
+  --input: oklch(0.18 0.035 255);
+  --ring: oklch(0.55 0.22 25);
+  --chart-1: oklch(0.55 0.22 25);
+  --chart-2: oklch(0.65 0.15 255);
+  --chart-3: oklch(0.45 0.18 260);
   --chart-4: oklch(0.85 0.02 250);
-  --chart-5: oklch(0.45 0.12 260);
-  --radius: 0.75rem;
-  --sidebar: oklch(0.1 0.02 250);
+  --chart-5: oklch(0.75 0.12 200);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.14 0.03 255);
   --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.65 0.15 220);
+  --sidebar-primary: oklch(0.55 0.22 25);
   --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.18 0.03 250);
+  --sidebar-accent: oklch(0.20 0.04 255);
   --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.25 0.03 250);
-  --sidebar-ring: oklch(0.65 0.15 220);
+  --sidebar-border: oklch(0.28 0.04 255);
+  --sidebar-ring: oklch(0.55 0.22 25);
   
   /* Custom airline colors */
-  --gold: oklch(0.78 0.15 75);
-  --glass: oklch(0.98 0 0 / 0.08);
-  --glass-border: oklch(0.98 0 0 / 0.15);
+  --ba-red: oklch(0.55 0.22 25);
+  --ba-blue: oklch(0.25 0.06 255);
+  --gold: oklch(0.78 0.12 80);
+  --glass: oklch(0.98 0 0 / 0.06);
+  --glass-border: oklch(0.98 0 0 / 0.12);
 }
 
 @theme inline {
@@ -84,6 +86,8 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-ba-red: var(--ba-red);
+  --color-ba-blue: var(--ba-blue);
   --color-gold: var(--gold);
   --color-glass: var(--glass);
   --color-glass-border: var(--glass-border);
@@ -111,6 +115,21 @@ html {
   border: 1px solid var(--glass-border);
 }
 
+/* BA-style ribbon accent */
+.ba-ribbon {
+  position: relative;
+}
+.ba-ribbon::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--ba-red);
+  border-radius: 2px 0 0 2px;
+}
+
 /* Animation keyframes */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
@@ -120,6 +139,11 @@ html {
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 .animate-float {
@@ -135,4 +159,8 @@ html {
   );
   background-size: 200% 100%;
   animation: shimmer 3s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
 }

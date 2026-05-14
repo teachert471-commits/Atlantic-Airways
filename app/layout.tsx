@@ -7,13 +7,13 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Atlantic Crown Airways | Luxury Flights UK to USA',
-  description: 'Experience premium transatlantic travel with Atlantic Crown Airways. Luxury flights from the UK to the USA with unmatched comfort, gourmet dining, and world-class service.',
-  keywords: ['luxury airline', 'transatlantic flights', 'UK to USA flights', 'premium travel', 'business class', 'first class'],
+  title: 'British Airways | Flights & Holidays',
+  description: 'Book flights online with British Airways. Find cheap airfares, last minute deals and seat sales. Explore destinations, check-in online and manage your booking.',
+  keywords: ['British Airways', 'flights', 'UK flights', 'transatlantic', 'airline', 'travel', 'holidays'],
 }
 
 export const viewport = {
-  themeColor: '#0a1628',
+  themeColor: '#0a1833',
   userScalable: true,
 }
 
